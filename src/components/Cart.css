@@ -1,0 +1,36 @@
+.cartBG {
+    position: absolute;
+    top: 1.91%;
+    right: 4.27%;
+    width: 60px;
+    height: 60px;
+    background-color: #2F2926;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    border: 0;
+    background-image: url("../graphics/bag.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cartBG:hover {
+    cursor: pointer;
+}
+
+.cartCountBG {
+    position: absolute;
+    top: 1.91%; /* eventuellt applicera px, alt. flexbox */
+    right: 5.33%;
+    width: 14px;
+    height: 14px;
+    background-color: #E5674E;
+    border-radius: 50%;
+    border: 0;
+    font-family: 'PT Serif', serif; /* imported in index.html */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 120%;
+    color: #FFFFFF;
+    text-align: center;   
+}

@@ -1,0 +1,47 @@
+.menuItem {
+    display: flex;
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+/*
+.addToCartBG {
+    flex-basis: 100px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #2F2926;
+    text-align: center;
+    margin: 0;
+}
+
+.addToCartBG:hover {
+    cursor: pointer;
+    transform: rotate(-45deg);
+}
+
+.imageAddtoCart {
+    width: 11.19px;
+    height: 11.19px;
+}
+*/
+
+.menuAdd {
+    flex-basis: 100px;
+    background-color: #00FF00;
+}
+
+.menuTitle {
+    flex-basis: 100px;
+    background-color: #FEFEFE;
+}
+
+.menuPrice {
+    flex-basis: 100px;
+    background-color: #AEA444;
+}
+
+.menuDesc {
+    flex-basis: 100px;
+    background-color: #FF0000;
+}

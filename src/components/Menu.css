@@ -1,0 +1,38 @@
+.menuMain {
+    min-height: 100vh;
+    background-color: #F3E4E1;
+}
+
+.menuHeader img {
+    width: 100%;
+}
+
+.menuFooter img {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.menuTitle {
+    position: absolute;
+    width: 82.9%;
+    height: 60px;
+    left: 8.55%;
+    top: 119px; /* kanske ändra detta pga stor skärm-fubar */
+    background-color: #FFEEEE; /* temp */
+    font-family: 'PT Serif', serif; /* imported in index.html */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    text-align: center;
+    color: #2F2926;
+}
+
+.menuItems {
+    position: absolute;
+    width: 82.9%;
+    left: 8.55%;
+    top: 199px; /* kanske ändra detta pga stor skärm-fubar */
+}
