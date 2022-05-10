@@ -1,0 +1,20 @@
+.cartSubmitDiv {
+    text-align: center;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.cartSubmit {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.cartSubmit:hover {
+    cursor: pointer;
+}

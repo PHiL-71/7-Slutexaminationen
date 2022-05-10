@@ -1,17 +1,29 @@
 import './App.css';
-import Landing from './components/Landing.jsx';
-import Menu from './components/Menu.jsx';
+
+import { Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+import Landing from './components/Landing.jsx';
+import Menu from './components/Menu.jsx';
+import Error from './components/Error.jsx';
+import Status from './components/Status.jsx';
+
 function App() {
-  const landing_loaded = useSelector((state) => { return state.landing_loaded });
+  const LandingLoaded = useSelector((state) => { return state.LandingLoaded });
 
   return (
     <div className="App">
-      { landing_loaded === 0
+      <Routes>
+        <Route path="/" element={
+        LandingLoaded === 0
         ? <Landing />
-        : <Menu />
-      }
+        : <Menu cartDisplay={ false } />
+        } exact />
+        <Route path="/menu" element={ <Menu cartDisplay={ false } /> } />
+        <Route path="/cart" element={ <Menu cartDisplay={ true } /> } />
+        <Route path="/status" element={ <Status /> } />
+        <Route path="*" element={ <Error /> } />
+      </Routes>
     </div>
   );
 

@@ -1,38 +1,70 @@
 .menuMain {
-    min-height: 100vh;
+    height: 100%;
+    width: 100%;
     background-color: #F3E4E1;
+}
+
+.menuHeader {
+    width: 100%;
 }
 
 .menuHeader img {
     width: 100%;
 }
 
-.menuFooter img {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+.menuCart {
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #2F2926;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    border: 0;
+    background-image: url("../graphics/bag.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menuCart:hover {
+    cursor: pointer;
+}
+
+.menuCartCounter {
+    position: absolute;
+    z-index: 10;
+    top: 14px;
+    right: 16px;
+    width: 18px;
+    height: 18px;
+    background-color: #E5674E;
+    border-radius: 50%;
+    border: 0;
+    font-family: 'PT Serif', serif; /* imported in index.html */
+    font-weight: 700;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;   
 }
 
 .menuTitle {
-    position: absolute;
-    width: 82.9%;
-    height: 60px;
-    left: 8.55%;
-    top: 119px; /* kanske ändra detta pga stor skärm-fubar */
-    background-color: #FFEEEE; /* temp */
+    width: 80%;
+    text-align: center;
+    margin: auto;
     font-family: 'PT Serif', serif; /* imported in index.html */
-    font-style: normal;
     font-weight: 700;
     font-size: 42px;
-    line-height: 120%;
-    text-align: center;
     color: #2F2926;
+    padding-bottom: 25px;
 }
 
-.menuItems {
-    position: absolute;
-    width: 82.9%;
-    left: 8.55%;
-    top: 199px; /* kanske ändra detta pga stor skärm-fubar */
+.menuFooter {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.menuFooter img {
+    width: 100%;
 }

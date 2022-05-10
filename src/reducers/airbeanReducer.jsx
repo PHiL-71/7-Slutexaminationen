@@ -1,20 +1,26 @@
 // Reducer - uppdaterar state i store
 const initialState = {
-    landing_loaded: 0,
-    /* in med cart:en osv här */
-}
-    
+    LandingLoaded: 0,
+    CartContent: []
+};
+
 const airbeanReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'INCREMENT':
             return {
                 ...state,
-                landing_loaded: state.landing_loaded + action.payload /* Nuvarande värde + nya värdet */
+                LandingLoaded: state.LandingLoaded + action.payload
             }
-        case 'DECREMENT':
+        case 'ADD_TO_CART':
             return {
                 ...state,
-                landing_loaded: state.landing_loaded - action.payload /* Nuvarande värde - nya värdet */
+                CartContent: [...state.CartContent, action.payload]
+            }
+        case 'EMPTY_CART':
+            return {
+                ...state,
+                CartContent: [],
+                LandingLoaded: 0
             }
         default:
         return state

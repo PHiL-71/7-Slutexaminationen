@@ -1,36 +1,81 @@
-.cartBG {
+.cartMain {
     position: absolute;
-    top: 1.91%;
-    right: 4.27%;
-    width: 60px;
-    height: 60px;
-    background-color: #2F2926;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
-    border-radius: 50%;
-    border: 0;
-    background-image: url("../graphics/bag.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 10;
+    background-color: #FFFFFF;
+    top: 75px;
+    box-shadow: 0 0 0 1500px rgba(0, 0, 0, 0.6);
+    width: calc(100% - 40px);
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    left: 20px;
 }
 
-.cartBG:hover {
-    cursor: pointer;
+.cartContentConnector {
+    position: absolute;
+    top: 65px;
+    right: 25px;
+    z-index: 22;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #FFFFFF;
 }
 
-.cartCountBG {
-    position: absolute;
-    top: 1.91%; /* eventuellt applicera px, alt. flexbox */
-    right: 5.33%;
-    width: 14px;
-    height: 14px;
-    background-color: #E5674E;
-    border-radius: 50%;
-    border: 0;
+.cartTopic {
     font-family: 'PT Serif', serif; /* imported in index.html */
-    font-style: normal;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 32px;
     line-height: 120%;
-    color: #FFFFFF;
-    text-align: center;   
+    text-align: center;
+    color: #2F2926;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #FFFFFF;
+    height: 70px;
+    padding-left: 20px;
+}
+
+.cartTitlePrice {
+    flex-basis: 100%;
+}
+
+.cartTitleSpan {
+    float: left;
+    line-height: 25px;
+    font-family: 'PT Serif', serif; /* imported in index.html */
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;
+    color: #2F2926;
+    background-color: #FFFFFF;
+}
+
+.cartDotsSpan {
+    display: block;
+    border-bottom: 2px dotted #000000;
+}
+
+.cartPriceSpan {
+    font-family: 'Work Sans', serif; /* imported in index.html */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 70%;
+    color: #2F2926;
+    text-align: left;
+}
+
+.cartQuantity {
+    flex-basis: 50px;
+    font-family: 'Work Sans', serif; /* imported in index.html */
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 120%;
+    color: #2F2926;
+    margin: 10px;
 }

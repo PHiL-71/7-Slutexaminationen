@@ -1,0 +1,54 @@
+.statusMain {
+    background-color: #E5674E;
+    min-height: 100vh;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.orderNumber {
+    font-family: 'Work Sans'; /* imported in index.html */
+    font-weight: 400;
+    font-size: 16px;
+    color: #F7D1CA;
+    margin-bottom: 50px;
+}
+
+.orderNumber span {
+    font-weight: 700;
+}
+
+.statusMessage {
+    font-family: 'PT Serif'; /* imported in index.html */
+    font-weight: 700;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.statusETA {
+    font-family: 'Work Sans'; /* imported in index.html */
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.statusETA span {
+    font-weight: 700;
+}
+
+.statusButton {
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.statusButton:hover {
+    cursor: pointer;
+}

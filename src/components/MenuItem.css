@@ -1,47 +1,83 @@
-.menuItem {
+.menuItemMain {
     display: flex;
-    border: 1px solid #000000;
-    padding: 5px;
+    flex-direction: row;
+    height: 60px;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
-/*
-.addToCartBG {
-    flex-basis: 100px;
-    height: 32px;
+.menuItemAdd {
+    display: flex;
+    flex-basis: 65px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuItemAddButton {
     width: 32px;
-    border-radius: 50%;
+    height: 32px;
     background-color: #2F2926;
-    text-align: center;
-    margin: 0;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    border: 0;
+    background-image: url("../graphics/add.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
 }
 
-.addToCartBG:hover {
+.menuItemAddButton:hover {
     cursor: pointer;
-    transform: rotate(-45deg);
 }
 
-.imageAddtoCart {
-    width: 11.19px;
-    height: 11.19px;
-}
-*/
-
-.menuAdd {
-    flex-basis: 100px;
-    background-color: #00FF00;
+.menuItemTitleDesc {
+    flex-basis: 100%;
+    margin-left: 10px;
 }
 
-.menuTitle {
-    flex-basis: 100px;
-    background-color: #FEFEFE;
+.menuItemTitle {
+    font-family: 'PT Serif'; /* imported in index.html */
+    font-weight: 700;
+    font-size: 23px;
+    color: #2F2926;
+    margin: 0;
+
+    line-height: 25px;
+    background-color: #F3E4E1;
 }
 
-.menuPrice {
-    flex-basis: 100px;
-    background-color: #AEA444;
+.menuItemDots {
+    display: flex;
+    flex-basis: 100%;
+    line-height: 5px;
+    background-color: #F3E4E1;
+    border-bottom: 2px dotted #B6ABA9;
 }
 
-.menuDesc {
-    flex-basis: 100px;
-    background-color: #FF0000;
+.menuItemDesc {
+    font-family: 'Work Sans'; /* imported in index.html */
+    font-weight: 400;
+    font-size: 12px;
+    color: #2F2926;
+    margin: 5px 0 0 0;
+}
+
+.menuItemPrice {
+    display: flex;
+    flex-basis: 115px;
+    justify-content: center;
+    align-items: top;
+    font-family: 'PT Serif'; /* imported in index.html */
+    font-weight: 700;
+    font-size: 23px;
+    color: #2F2926;
+}
+
+.menuItemPrice:after {
+    content: '\00a0kr';
+}
+
+.menuItemPrice:before {
+    content: '\00a0\00a0';
 }
