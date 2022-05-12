@@ -17,8 +17,8 @@ function Menu({ cartDisplay }) {
     useEffect(() => {
         async function getProducts() {
           //const response = await fetch("http://localhost:5000/api/beans");
-          //const response = await fetch("http://192.168.2.227:5000/api/beans"); /* To test on phone */
-          const response = await fetch("http://192.168.0.28:5000/api/beans"); /* To test at work */
+          const response = await fetch("http://192.168.2.227:5000/api/beans"); /* To test on phone */
+          //const response = await fetch("http://192.168.0.28:5000/api/beans"); /* To test at work */
           const data = await response.json();
           setProducts(data.menu);
         }
@@ -41,7 +41,7 @@ function Menu({ cartDisplay }) {
                 <img className="menuHeader" src={ menuHeader } alt="menu_header" />
                 <button className="menuCart" onClick={ () => { setDisplayCart((s) => !s); changeCartDisplay() } }></button>
                 <div className="menuCartCounter">
-                    { CartContent.length }
+                { (CartContent.reduce((a,v) =>  a = a + v.quantity , 0 )) }
                 </div>
             </div>
             <div className="menuTitle">
@@ -50,10 +50,11 @@ function Menu({ cartDisplay }) {
             {
                 products.map((product, i) => {
                     return (
-                        <MenuItem key={ i } id={ product.id } title={ product.title } desc={ product.desc } price={ product.price } />
+                        <MenuItem key={ i } id={ product.id } title={ product.title } desc={ product.desc } price={ product.price } quantity={ 1 } />
                     );
                 })
             }
+            
             <div className="menuFooter">
                 <img className="menuFooter" src={ menuFooter } alt="menu_footer" />
             </div>

@@ -8,7 +8,13 @@ export const setLandingLoaded = (count) => {
 export const addProduct = (cart_item) => {
     return {
         type: 'ADD_TO_CART',
-        payload: cart_item
+        payload: {
+            id: cart_item.id,
+            title: cart_item.title,
+            desc: cart_item.desc,
+            price: cart_item.price,
+            quantity: cart_item.quantity
+        }
     }
 }
 

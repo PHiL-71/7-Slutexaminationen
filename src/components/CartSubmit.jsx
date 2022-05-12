@@ -9,8 +9,8 @@ function CartSubmit() {
 
     function submitOrder() {
         //fetch("http://localhost:5000/api/beans", {
-        //fetch("http://192.168.2.227:5000/api/beans", { /* To test on phone */
-        fetch("http://192.168.0.28:5000/api/beans", { /* To test at work */
+        fetch("http://192.168.2.227:5000/api/beans", { /* To test on phone */
+        //fetch("http://192.168.0.28:5000/api/beans", { /* To test at work */
           method: "POST",
           body: JSON.stringify(products),
         })

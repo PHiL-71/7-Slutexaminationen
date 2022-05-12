@@ -77,5 +77,20 @@
     font-size: 14px;
     line-height: 120%;
     color: #2F2926;
-    margin: 10px;
+    margin-left: 10px;
+    justify-content: flex-start;
+}
+
+.cartTotalPrice {
+    flex-basis: 120px;
+    font-family: 'PT Serif', serif; /* imported in index.html */
+    font-weight: 700;
+    font-size: 23px;
+    color: #2F2926;
+    margin-left: 10px;
+    line-height: 120%;
+}
+
+.IncDe:hover {
+    cursor: pointer;
 }

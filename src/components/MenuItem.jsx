@@ -4,17 +4,17 @@ import { useDispatch } from "react-redux";
 
 import { addProduct } from '../actions/airbeanActions.jsx';
 
-function MenuItem({ id, title, desc, price }) {
+function MenuItem({ id, title, desc, price, quantity }) {
     const dispatch = useDispatch();
 
-    function AddToCart(id, title, desc, price) {
+    function AddToCart(id, title, desc, price, quantity) {
         dispatch(
             addProduct({
                 id: id,
                 title: title,
                 desc: desc,
                 price: price,
-                quantity: 1
+                quantity: quantity
             })
         );
     }
@@ -22,7 +22,7 @@ function MenuItem({ id, title, desc, price }) {
     return(
         <div className="menuItemMain">
             <div className="menuItemAdd">
-                <button className="menuItemAddButton"  onClick={ () => AddToCart(id, title, desc, price) }></button>
+                <button className="menuItemAddButton"  onClick={ () => AddToCart(id, title, desc, price, quantity) }></button>
             </div>
             <div className="menuItemTitleDesc">
                 <span className="menuItemTitle">{ title }</span><span className="menuItemDots"></span>
