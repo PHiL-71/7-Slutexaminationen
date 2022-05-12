@@ -1,8 +1,10 @@
+import './Error.css';
+
+import { Link } from 'react-router-dom';
+
 function Error() {
     return(
-        <div>
-            <h2>This page does not exist.</h2>
-        </div>
+        <div className="error">This page does not exist.<br /><br /><Link to="/">Go home</Link></div>
     );
 }
 

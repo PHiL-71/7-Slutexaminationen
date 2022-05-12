@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {BrowserRouter } from 'react-router-dom';
+
 import { createStore } from 'redux'; /* React önskar configureStore här istället */
 import airbeanReducer from './reducers/airbeanReducer.jsx';
 import { Provider } from 'react-redux';
@@ -15,17 +17,21 @@ import { Provider } from 'react-redux';
 */
 
 // Store - Innehåller state och reducer
+
 const store = createStore(
   airbeanReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={ store }> { /* Gör store tillgänglig för hela React-appen */ }
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={ store }>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -18,6 +18,20 @@ export const addProduct = (cart_item) => {
     }
 }
 
+export const addOne = (cart_item) => {
+    return {
+        type: 'ADD_ONE_TO_CART',
+        payload: cart_item
+    }
+}
+
+export const removeOne = (cart_item) => {
+    return {
+        type: 'REMOVE_ONE_FROM_CART',
+        payload: cart_item
+    }
+}
+
 export const emptyCart = () => {
     return {
         type: 'EMPTY_CART',
